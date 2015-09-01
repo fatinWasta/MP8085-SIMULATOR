@@ -1,0 +1,72 @@
+#include<conio.h>
+#include<stdio.h>
+int i,n[7000];
+void main()
+{
+     clrscr();
+ //************************ to take input************************
+     printf("Enter Opcode For Your Expected program::\n\n\n");
+       for(i=6001;i<=6013;i++)
+	{
+	      printf("\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==06)         //only if ...
+		  {
+		if(n[6002]==04)
+
+		     {
+			if(n[6003]==05)  //real opcode is 0e...but 0e=05 as e comes at 5th pos alpabatically
+			   {
+			      if(n[6004]==06)
+			       {
+				  if(n[6005]==35)
+				     {
+					  if(n[6006]==00)
+					      {
+						   if(n[6007]==81)
+						     {
+							  if(n[6008]==05)
+							      {
+								  if(n[6009]==32) //c2=32
+
+								      {     if(n[6010]==07)
+
+									     {
+										 if(n[6011]==60)
+										    {
+											if(n[6012]==57)
+											 {
+											     if(n[6013]==36)// 36=cf
+
+									      printf("\n\n\n\n\n\n\t\t:::entered opcode is correct of for your program:::\n");
+									      printf("\n\n\t\t\t**you entered no are 6 & 4**");
+									      printf("\n\t\t\t$$$ MULTIPLICATION is: 24 $$$");
+											  }
+										    }
+									      }
+
+								       }                                                \
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	  }
+
+
+
+
+	 getch();
+
+
+}
