@@ -1,0 +1,497 @@
+#include<conio.h>
+#include<dos.h>
+#include<stdio.h>
+int i,n[7000];
+void main()
+{
+    int i,a;
+    clrscr();
+ //**************SOUND OF START***************************************************
+
+   for ( a = 200 ; a <= 1000 ; a = a + 20 )
+   {
+      sound(a);
+      delay(40);
+   }
+   nosound();
+//**********************************************************************
+
+    printf("\n^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*\n\n");
+    printf("\t\t    <<<<8085 MICROPROCESSOR SIMULATOR >>>>\n\n\n");
+    printf("^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*\n\n");
+    printf("\t\t\t........WELCOME........\n\n");
+    printf("This program is just about converting simply 8085 MICROPROCESSOR\nprogrames into C language:\n\n\n");
+    printf("\nPrograme Developed By:\n\n\t1.FATIN FAKIRMOHAMAD WASTA.\n\t2.SUDIP NISHIKANT KAMBLI.\n\n\n ");
+    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+    getch();
+    gotoxy(15,10);
+    clrscr();
+    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+    printf("**:PROGRAMES:**\n\n");
+    printf("1. Assembly language program to calculate ADDITION of TWO numbers.\n\n");
+    printf("2. Assembly language program to calculate SUBTRACTION of of TWO numbers.\n\n");
+    printf("3. Assembly language program to calculate MULTIPLICATION of TWO numbers.\n\t Store result into D register.\n\n");
+    printf("4. Assembly language program to calculate DIVISION of TWO numbers.\n\n");
+    printf("5. Assembly language program to find LARGEST number in given array.\n\t Array starting from location 2001 TO 2010.\n\n");
+    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+    printf("Enter your Program no. which you want to execute:");
+    scanf("%d",&i);
+    getch();
+    gotoxy(10,15);
+    clrscr();
+    switch(i)
+	{
+	    case 1:
+	    printf("\n You want to enter opcode of program for ADDITION of TWO numbers..\n**Proceed further**\n\n(!HINT!)\nuse commands MVI reg , ADD reg , STA 16bit.\n\nEnter the Opcode:\n\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+		   {
+ //************************ to take input************************
+      int n1,n2;
+      clrscr();
+      printf("\n\nEnter Opcode For Your Expected program::\n\n\n");
+      printf("\nEnter N1:\n");
+      scanf("%d",&n1);
+       printf("\nEnter N2:\n");
+      scanf("%d",&n2);
+
+ //************************ to take input************************
+
+       for(i=6001;i<=6010;i++)
+	{
+	      printf(	"\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==06)         //only if ...
+		  {
+		if(n[6002]==n1)
+
+		     {
+			if(n[6003]==05)  //real opcode is 0e...but 0e=05 as e comes at 5th pos alpabatically
+			   {
+			      if(n[6004]==n2)
+			       {
+				  if(n[6005]==78)
+				     {
+					  if(n[6006]==81)
+					      {
+						   if(n[6007]==32)
+						     {
+							  if(n[6008]==00)
+							      {
+								  if(n[6009]==21)
+
+								      {     if(n[6010]==36)
+
+									     {
+										clrscr();
+										printf("\n\n\n\n\n\n\t\t:::entered opcode is correct of for your program:::\n");
+										printf("\n\n\t\t\t**you entered no are**\n\n\t\t\t\t%d\n\n\t\t\t\t&\n\n\t\t\t\t%d",n1,n2);
+										printf("\n\n\t\t\t$$$ ADDITION is: $$$\n\n\t\t\t\t%d",n1+n2);
+										getch();
+										gotoxy(10,15);
+
+									      }
+
+								       }
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	  }
+
+		   }
+	    break;
+	    case 2:
+	    printf("\n You want to enter opcode of program for SUBTRACTION of TOW numbers..\n**Proceed further**\n\n(!HINT!)\nuse commands MVI reg , SUB reg , STA 16bit.\n\Enter the Opcode:\n\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+		      {
+      int s1,s2;
+      clrscr();
+      printf("\n\nEnter Opcode For Your Expected program::\n\n\n");
+      printf("\nEnter s1:\n");
+      scanf("%d",&s1);
+       printf("\nEnter s2:\n");
+      scanf("%d",&s2);
+ //************************ to take input************************
+     printf("Enter Opcode For Your Expected program::\n\n\n");
+       for(i=6001;i<=6010;i++)
+	{
+	      printf(	"\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==06)         //only if ...
+		  {
+		if(n[6002]==s1)
+
+		     {
+			if(n[6003]==05)  //real opcode is 0e...but 0e=05 as e comes at 5th pos alpabatically
+			   {
+			      if(n[6004]==s2)
+			       {
+				  if(n[6005]==78)
+				     {
+					  if(n[6006]==91)
+					      {
+						   if(n[6007]==32)
+						     {
+							  if(n[6008]==00)
+							      {
+								  if(n[6009]==24)
+
+								      {     if(n[6010]==36)
+
+									     {
+											clrscr();
+										printf("\n\n\n\n\n\n\t\t:::entered opcode is correct of for your program:::\n");
+										printf("\n\n\t\t\t**you entered no are**\n\n\t\t\t\t%d\n\n\t\t\t\t&\n\n\t\t\t\t%d",s1,s2);
+										printf("\n\n\t\t\t$$$ SUBTRACTION is: $$$\n\n\t\t\t\t%d",s1-s2);
+										getch();
+										gotoxy(10,15);
+
+
+									      }
+
+								       }
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	  }
+
+
+
+		      }
+	    break;
+	    case 3:
+	    printf("\n You want to enter opcode of program for MULTIPLICATION of TWO numbers...\n**Proceed further**\n\n(!HINT!)\nuse commands MVI reg , ADD reg , DCR reg , JNZ.\nEnter the Opcode:\n\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+		  {
+      int m1,m2;
+      clrscr();
+      printf("\n\nEnter Opcode For Your Expected program::\n\n\n");
+      printf("\nEnter m1:\n");
+      scanf("%d",&m1);
+       printf("\nEnter m2:\n");
+      scanf("%d",&m2);
+ //************************ to take input************************
+     printf("Enter Opcode For Your Expected program::\n\n\n");
+       for(i=6001;i<=6013;i++)
+	{
+	      printf("\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==06)         //only if ...
+		  {
+		if(n[6002]==m1)
+
+		     {
+			if(n[6003]==05)  //real opcode is 0e...but 0e=05 as e comes at 5th pos alpabatically
+			   {
+			      if(n[6004]==m2)
+			       {
+				  if(n[6005]==35)
+				     {
+					  if(n[6006]==00)
+					      {
+						   if(n[6007]==81)
+						     {
+							  if(n[6008]==05)
+							      {
+								  if(n[6009]==32) //c2=32
+
+								      {     if(n[6010]==07)
+
+									     {
+										 if(n[6011]==60)
+										    {
+											if(n[6012]==57)
+											 {
+											     if(n[6013]==36)// 36=cf
+											       {
+													clrscr();
+										printf("\n\n\n\n\n\n\t\t:::entered opcode is correct of for your program:::\n");
+										printf("\n\n\t\t\t**you entered no are**\n\n\t\t\t\t%d\n\n\t\t\t\t&\n\n\t\t\t\t%d",m1,m2);
+										printf("\n\n\t\t\t$$$ MULTIPLICATION is: $$$\n\n\t\t\t\t%d",m1*m2);
+										getch();
+										gotoxy(10,15);
+
+
+											       }
+
+											  }
+										    }
+									      }
+
+								       }                                                \
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	   }
+
+		  }
+	    break;
+	    case 4:
+	    printf("\n You want to enter opcode of program for DIVISION of TWO numbers..\n**Proceed further**\n\n(!HINT!)\nuse commands MVI reg , SUB reg , INR reg , CMP reg , JNC , STA 16bit.\nEnter the Opcode:\n\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+		   {
+      float d1,d2;
+      clrscr();
+      printf("\n\nEnter Opcode For Your Expected program::\n\n\n");
+      printf("\nEnter D1:\n");
+      scanf("%f",&d1);
+       printf("\nEnter D2:\n");
+      scanf("%f",&d2);
+
+ //************************ to take input************************
+     printf("Enter Opcode For Your Expected program::\n\n\n");
+       for(i=6001;i<=6020;i++)
+	{
+	      printf(	"\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==35)//3e=35        only if ...
+		  {
+		if(n[6002]==d1)// 08 is illegal so hit only 8.
+
+		     {
+			if(n[6003]==06)
+			   {
+			      if(n[6004]==d2)
+			       {
+				  if(n[6005]==05)
+				     {
+					  if(n[6006]==00)
+					      {
+						   if(n[6007]==90)
+						     {
+							  if(n[6008]==03)//0c=03
+							      {
+								  if(n[6009]==28)//b8=28
+
+								      {     if(n[6010]==02)
+
+									     {      if(n[6011]==06)
+											{
+											    if(n[6012]==60)
+											    {
+											       if(n[6013]==32)
+												  {
+												      if(n[6014]==16)
+													{
+													    if(n[6015]==24)
+													       {
+														   if(n[6016]==79)
+														      {
+															  if(n[6017]==32)
+															      {
+																  if(n[6018]==15)
+																     {
+																	if(n[6019]==24)
+																	   {
+																	       if(n[6020]==36)
+																		  {
+																		     clrscr();
+										printf("\n\n\n\n\n\n\t\t:::entered opcode is correct of for your program:::\n");
+										printf("\n\n\t\t\t**you entered no are**\n\n\t\t\t\t%f\n\n\t\t\t\t&\n\n\t\t\t\t%f",d1,d2);
+										printf("\n\n\t\t\t$$$ DIVISION is: $$$\n\n\t\t\t\t%f",d1/d2);
+										getch();
+										gotoxy(10,15);
+
+
+																		  }
+																	    }
+																     }
+															      }
+														       }
+													       }
+													}
+												  }
+											    }
+											}
+
+									      }
+
+								       }
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	  }
+
+
+
+
+
+		  }
+	    break;
+	    case 5:
+	    printf("\n \n");
+	    printf("\n You want to enter opcode of program to find LARGEST no entered in array.\n**Proceed further**\n\n(!HINT!)\nuse commands LXI reg 16bit , CMP reg , JNC reg , INX reg , DCR reg , STA 16bit.\nEnter the Opcode:\n\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+		      {
+   int m[7000],i,max;
+   clrscr();
+   printf("\n\n\t\tENTER the ARRAY:\n");
+   for(i=2001;i<2011;i++)
+	{
+	    printf("Enterr the ELEMENT at POSITION %d\n",i);
+	    scanf("%d",&m[i]);
+	}
+   printf("\n\nYou Enterd ARRAY Successvely...\n\n");
+ //************************ to take input************************
+     printf("Enter Opcode For Your Expected program::\n\n\n");
+       for(i=6001;i<=6020;i++)
+	{
+	      printf(	"\nenter mnemonics at address %d\n",i);
+	     scanf("%d",& n[i]);
+	}
+//****************************ACTUAL CODE**************************
+	     if(n[6001]==21)//3e=35        only if ...
+		  {
+		if(n[6002]==01)// 08 is illegal so hit only 8.
+
+		     {
+			if(n[6003]==20)
+			   {
+			      if(n[6004]==05) //0e=05
+			       {
+				  if(n[6005]==01) //0a=01
+				     {
+					  if(n[6006]==46)
+					      {
+						   if(n[6007]==28)//b8=28
+						     {
+							  if(n[6008]==42)//d2=42
+							      {
+								  if(n[6009]==02)//0b=02
+
+								      {     if(n[6010]==60)
+
+									     {      if(n[6011]==78)
+											{
+											    if(n[6012]==24)
+											    {
+											       if(n[6013]==04)//0d=04
+												  {
+												      if(n[6014]==32)//c2
+													{
+													    if(n[6015]==05)
+													       {
+														   if(n[6016]==60)
+														      {
+															  if(n[6017]==32)
+															      {
+																  if(n[6018]==01)//0a
+																     {
+																	if(n[6019]==23)
+																	   {
+																	       if(n[6020]==36)
+																		  {
+																		      max=m[0];
+																		      for(i=2002;i<=2010;i++)
+																			    {
+																				 if(m[i]>max)
+																				       {
+																					    max=m[i];
+
+																					}
+																			    }
+																			      // clrscr();
+																			     printf("\n\n\t\t\t :Entered ARRAY is:\n\t\t\t");
+																			     for(i=2001;i<2011;i++)
+																				 {
+																				     printf("\n\t\t\t\t%d",m[i]);
+																				 }
+																			     printf("\n\n\t\t\tThe LARGERST number in the ARRAY is\n\n\t\t\t\t %d",max);
+
+
+																		getch();
+																		gotoxy(10,15);
+
+
+																		  }
+																	    }
+																     }
+															      }
+														       }
+													       }
+													}
+												  }
+											    }
+											}
+
+									      }
+
+								       }
+							      }
+						     }
+					       }
+				      }
+			       }
+			    }
+		     }
+	  }
+
+
+      else
+	  {
+	   printf("*******************************************************\n^%$#(d*^#((@&^#*@(a#&#%&r$%$^k^d^%^d%$e#)v(?/i%#l@&@*#^\n>\n>ERoRR OcCored\n\n<<<<<<<<<<<< ENTRED OPCODE IS WRONG >>>>>>>>>>>>\n\n!!PLEASE TRY AGAIN!!\n********************************************************");
+	  }
+
+		      }
+	    break;
+	    default:
+	    printf("\n\tERrOr OCCouRed..! \n\t!!SORRY!!\n\tYOU ENTERED WRONG CHOICE\n");
+	    printf("\t### :PLEASE TRY AGAIN: ###\n");
+	    printf("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n\n");
+	    break;
+
+
+	}
+
+
+
+    getch();
+
+}
